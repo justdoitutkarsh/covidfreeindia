@@ -38,7 +38,7 @@
         </chart-card>
       </div>
 
-      <div class="col-md-6 col-12">
+      <!-- <div class="col-md-6 col-12">
         <chart-card title="Email Statistics"
                     sub-title="Last campaign performance"
                     :chart-data="preferencesChart.data"
@@ -51,9 +51,9 @@
             <i class="fa fa-circle text-warning"></i> Unsubscribe
           </div>
         </chart-card>
-      </div>
+      </div> -->
 
-      <div class="col-md-6 col-12">
+      <!-- <div class="col-md-6 col-12">
         <chart-card title="2015 Sales"
                     sub-title="All products including Taxes"
                     :chart-data="activityChart.data"
@@ -66,7 +66,7 @@
             <i class="fa fa-circle text-warning"></i> BMW 5 Series
           </div>
         </chart-card>
-      </div>
+      </div> -->
 
     </div>
 
@@ -75,6 +75,7 @@
 <script>
 import { StatsCard, ChartCard } from "@/components/index";
 import Chartist from 'chartist';
+import axios from "axios";
 export default {
   components: {
     StatsCard,
@@ -89,7 +90,7 @@ export default {
         {
           type: "warning",
           icon: "ti-server",
-          title: "Capacity",
+          title: "Confirmed",
           value: "105GB",
           footerText: "Updated now",
           footerIcon: "ti-reload"
@@ -97,7 +98,7 @@ export default {
         {
           type: "success",
           icon: "ti-wallet",
-          title: "Revenue",
+          title: "Active",
           value: "$1,345",
           footerText: "Last day",
           footerIcon: "ti-calendar"
@@ -105,7 +106,7 @@ export default {
         {
           type: "danger",
           icon: "ti-pulse",
-          title: "Errors",
+          title: "Recovered",
           value: "23",
           footerText: "In the last hour",
           footerIcon: "ti-timer"
@@ -113,7 +114,7 @@ export default {
         {
           type: "info",
           icon: "ti-twitter-alt",
-          title: "Followers",
+          title: "Decreased",
           value: "+45",
           footerText: "Updated now",
           footerIcon: "ti-reload"
@@ -133,8 +134,6 @@ export default {
           ],
           series: [
             [287, 385, 490, 562, 594, 626, 698, 895, 952],
-            [67, 152, 193, 240, 387, 435, 535, 642, 744],
-            [23, 113, 67, 108, 190, 239, 307, 410, 410]
           ]
         },
         options: {
@@ -189,6 +188,23 @@ export default {
         options: {}
       }
     };
+  },
+  
+  mounted(){
+  const options = {
+  method: 'GET',
+  url: 'https://www.mohfw.gov.in/data/datanew.json',
+  // headers: {
+  //   'x-rapidapi-key': 'SIGN-UP-FOR-KEY',
+  //   'x-rapidapi-host': 'covid-19-data.p.rapidapi.com'
+  // }
+};
+
+axios.request(options).then(function (response) {
+	console.log(response.data);
+}).catch(function (error) {
+	console.error(error);
+});
   }
 };
 </script>

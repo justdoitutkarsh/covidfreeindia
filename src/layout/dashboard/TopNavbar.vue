@@ -1,8 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
+      <!-- <p>Oxygen Suppiler Details</p> -->
       <a class="navbar-brand" href="#">{{routeName}}</a>
-      <button class="navbar-toggler navbar-burger"
+<!-- <button class="navbar-toggler navbar-burger"
               type="button"
               @click="toggleSidebar"
               :aria-expanded="$sidebar.showSidebar"
@@ -10,8 +11,8 @@
         <span class="navbar-toggler-bar"></span>
         <span class="navbar-toggler-bar"></span>
         <span class="navbar-toggler-bar"></span>
-      </button>
-      <div class="collapse navbar-collapse">
+      </button> -->
+       <!-- <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -20,7 +21,7 @@
             </a>
           </li>
           <drop-down class="nav-item"
-                     title="5 Notifications"
+                     title="Select Your City"
                      title-classes="nav-link"
                      icon="ti-bell">
             <a class="dropdown-item" href="#">Notification 1</a>
@@ -38,11 +39,39 @@
             </a>
           </li>
         </ul>
+      </div> 
+       -->
+    </div>
+    
+    <div>
+    <div class="md-layout md-gutter">
+      <div class="md-layout-item" style="margin-right: 2vw;">
+        <md-field>
+          <label for="country" style="color: #66615B;">Select State</label>
+          <md-select v-model="country" name="country" id="country" md-dense>
+            <md-option value="australia">Lucknow</md-option>
+            <!-- <md-option value="brazil">Brazil</md-option>
+            <md-option value="japan">Japan</md-option>
+            <md-option value="united-states">United States</md-option> -->
+          </md-select>
+        </md-field>
       </div>
-    </div></nav>
+
+    </div>
+  </div>
+
+    </nav>
 </template>
 <script>
+import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default-dark.css' // This line here
+
+Vue.use(VueMaterial)
+
 export default {
+  
   computed: {
     routeName() {
       const { name } = this.$route;
@@ -51,7 +80,10 @@ export default {
   },
   data() {
     return {
-      activeNotifications: false
+      activeNotifications: false,
+      movies: [],
+      country: null,
+      font: null
     };
   },
   methods: {
@@ -74,4 +106,17 @@ export default {
 };
 </script>
 <style>
+
+.md-field.md-theme-default.md-focused .md-input, .md-field.md-theme-default.md-focused .md-textarea, .md-field.md-theme-default.md-has-value .md-input, .md-field.md-theme-default.md-has-value .md-textarea{
+  -webkit-text-fill-color: rgb(102, 97, 91);
+
+}
+.md-field.md-theme-default:after {
+    background-color: rgb(102, 97, 91);
+}
+.md-icon.md-theme-default.md-icon-image svg {
+    fill:  rgb(102, 97, 91);
+    
+}
+
 </style>

@@ -49,7 +49,7 @@ const routes = [
       },
       {
         path: "table-list",
-        name: "table-list",
+        name: "Oxygen Supply Center",
         component: TableList
       }
     ]
