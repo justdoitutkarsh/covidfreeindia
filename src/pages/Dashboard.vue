@@ -12,15 +12,15 @@
             <p>{{stats.title}}</p>
             {{stats.value}}
           </div>
-          <div class="stats" slot="footer">
+          <!-- <div class="stats" slot="footer">
             <i :class="stats.footerIcon"></i> {{stats.footerText}}
-          </div>
+          </div> -->
         </stats-card>
       </div>
     </div>
 
     <!--Charts-->
-    <div class="row">
+    <!-- <div class="row">
 
       <div class="col-12">
         <chart-card title="Users behavior"
@@ -38,7 +38,7 @@
         </chart-card>
       </div>
 
-      <!-- <div class="col-md-6 col-12">
+      <div class="col-md-6 col-12">
         <chart-card title="Email Statistics"
                     sub-title="Last campaign performance"
                     :chart-data="preferencesChart.data"
@@ -51,9 +51,9 @@
             <i class="fa fa-circle text-warning"></i> Unsubscribe
           </div>
         </chart-card>
-      </div> -->
+      </div>
 
-      <!-- <div class="col-md-6 col-12">
+      <div class="col-md-6 col-12">
         <chart-card title="2015 Sales"
                     sub-title="All products including Taxes"
                     :chart-data="activityChart.data"
@@ -66,9 +66,9 @@
             <i class="fa fa-circle text-warning"></i> BMW 5 Series
           </div>
         </chart-card>
-      </div> -->
+      </div>
 
-    </div>
+    </div> -->
 
   </div>
 </template>
@@ -89,33 +89,33 @@ export default {
       statsCards: [
         {
           type: "warning",
-          icon: "ti-server",
-          title: "Confirmed",
+          icon: "ti-stats-up",
+          title: "Active",
           value: "105GB",
           footerText: "Updated now",
           footerIcon: "ti-reload"
         },
         {
           type: "success",
-          icon: "ti-wallet",
-          title: "Active",
+          icon: "ti-stats-down",
+          title: "Discharged",
           value: "$1,345",
           footerText: "Last day",
           footerIcon: "ti-calendar"
         },
         {
           type: "danger",
-          icon: "ti-pulse",
-          title: "Recovered",
+          icon: "ti-heart-broken",
+          title: "Deaths",
           value: "23",
           footerText: "In the last hour",
           footerIcon: "ti-timer"
         },
         {
           type: "info",
-          icon: "ti-twitter-alt",
-          title: "Decreased",
-          value: "+45",
+          icon: "ti-pulse",
+          title: "Total Vaccination",
+          value: "13.5 crore",
           footerText: "Updated now",
           footerIcon: "ti-reload"
         }
@@ -186,7 +186,8 @@ export default {
           series: [62, 32, 6]
         },
         options: {}
-      }
+      },
+      covidData:[]
     };
   },
   
@@ -199,9 +200,15 @@ export default {
   //   'x-rapidapi-host': 'covid-19-data.p.rapidapi.com'
   // }
 };
-
+let vm=this
 axios.request(options).then(function (response) {
 	console.log(response.data);
+  vm.covidData=response.data;
+  var result=vm.covidData.filter(obj=> obj.sno == "11111");
+  // console.log(result)
+  vm.statsCards[0].value=result[0].new_active;
+  vm.statsCards[1].value=result[0].new_cured;
+  vm.statsCards[2].value=result[0].new_death;
 }).catch(function (error) {
 	console.error(error);
 });
@@ -209,4 +216,7 @@ axios.request(options).then(function (response) {
 };
 </script>
 <style>
+
+
+
 </style>
