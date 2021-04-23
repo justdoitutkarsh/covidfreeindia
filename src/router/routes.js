@@ -19,7 +19,7 @@ const routes = [
     children: [
       {
         path: "dashboard",
-        name: "dashboard",
+        name: "COVID CASES",
         component: Dashboard
       },
       {
@@ -49,7 +49,7 @@ const routes = [
       },
       {
         path: "table-list",
-        name: "Oxygen Supply Center",
+        name: "Ambulance Service",
         component: TableList
       }
     ]
