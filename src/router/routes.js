@@ -56,6 +56,41 @@ const routes = [
         path: "vaccine-centers",
         name: "VACCINE CENTERS",
         component: TableList
+      },
+      {
+        path: "sampleCollection",
+        name: "SAMPLE COLLECTION",
+        component: TableList
+      },
+      {
+        path: "medicalAdvice",
+        name: "MEDICAL ADVICE",
+        component: TableList
+      },
+      {
+        path: "medicalshops",
+        name: "NEAR BY MEDICAL SHOPS",
+        component: TableList
+      },
+      {
+        path: "paidIsolation",
+        name: "PAID ISOLATION",
+        component: TableList
+      },
+      {
+        path: "foodFacility",
+        name: "FOOD FACILITY",
+        component: TableList
+      },
+      {
+        path: "ngo",
+        name: "NGO'S PROVIDING RELIEF",
+        component: TableList
+      },
+      {
+        path: "register",
+        name: "REGISTER WITH US",
+        component: TableList
       }
     ]
   },

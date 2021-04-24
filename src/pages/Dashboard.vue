@@ -120,6 +120,7 @@
 
     <!-- Home Sample Collection -->
     <md-card>
+      <div v-on:click="nagivateToPage('sampleCollection')">
       <md-card-media>
         <img src="@/assets/img/home-sample-collection.jpg" alt="People">
       </md-card-media>
@@ -128,11 +129,12 @@
         <div class="md-title">SAMPLE COLLECTION</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+      </div>
     </md-card>
 
     <!-- MEDICAL ADVICE -->
     <md-card>
+      <div v-on:click="nagivateToPage('medicalAdvice')">
       <md-card-media>
         <img src="@/assets/img/contact-doctor.jpg" alt="People">
       </md-card-media>
@@ -141,10 +143,11 @@
         <div class="md-title">MEDICAL ADVICE</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+      </div>
     </md-card>
     <!-- Near By Medical Shops -->
      <md-card>
+       <div v-on:click="nagivateToPage('medicalshops')">
       <md-card-media>
         <img src="@/assets/img/medicine.jpg" alt="People">
       </md-card-media>
@@ -153,10 +156,11 @@
         <div class="md-title">NEAR BY MEDICAL SHOPS</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+       </div>
     </md-card>
     <!-- Paid Isolation -->
       <md-card>
+        <div v-on:click="nagivateToPage('paidIsolation')">
       <md-card-media>
         <img src="@/assets/img/isolation-center.jpg" alt="People">
       </md-card-media>
@@ -165,22 +169,24 @@
         <div class="md-title">PAID ISOLATION</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+      </div>
     </md-card>
-   <!-- GROCERY AT DOORSTEP -->
+   <!-- FOOD FACILITY -->
      <md-card>
+      <div v-on:click="nagivateToPage('foodFacility')">
       <md-card-media>
         <img src="@/assets/img/CoronaGroceries.jpg" alt="People">
       </md-card-media>
 
       <md-card-header>
-        <div class="md-title">GROCERY AT DOORSTEP</div>
+        <div class="md-title">FOOD FACILITY</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+    </div>
     </md-card>
      <!-- NGO HELPLINE -->
      <md-card>
+      <div v-on:click="nagivateToPage('ngo')">
       <md-card-media>
         <img src="@/assets/img/ngo.png" alt="People">
       </md-card-media>
@@ -189,10 +195,11 @@
         <div class="md-title">NGO'S PROVIDING RELIEF</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+      </div>
     </md-card>
     <!-- Register Yourself -->
      <md-card>
+      <div v-on:click="nagivateToPage('register')">
       <md-card-media>
         <img src="@/assets/img/join-us.png" alt="People">
       </md-card-media>
@@ -201,7 +208,7 @@
         <div class="md-title">REGISTER WITH US</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+      </div>
     </md-card>
   </div>
  
