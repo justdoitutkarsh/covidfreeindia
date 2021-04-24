@@ -2,10 +2,19 @@
   <div :class="{'nav-open': $sidebar.showSidebar}">
     <notifications></notifications>
     <router-view></router-view>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
   </div>
+  
 </template>
 
 <script>
+import Vue from 'vue'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+
+Vue.use(VueMaterial)
+
 export default {};
 </script>
 
