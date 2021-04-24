@@ -19,7 +19,7 @@ const routes = [
     children: [
       {
         path: "dashboard",
-        name: "COVID CASES",
+        name: "WELCOME",
         component: Dashboard
       },
       {

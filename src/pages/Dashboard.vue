@@ -71,7 +71,41 @@
     </div> -->
 
     <div class="card-expansion">
-    <md-card>
+    <!-- <md-card>
+      <md-card-media>
+        <img src="@/assets/img/vaccine-center.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">VACCINE CENTERS</div>
+        <div class="md-subhead">Subtitle here</div>
+      </md-card-header>
+
+      <md-card-expand>
+        <md-card-actions md-alignment="space-between">
+          <div>
+            <md-button></md-button>
+            <md-button>Action</md-button>
+          </div>
+
+          <md-card-expand-trigger>
+            <md-button class="md-icon-button">
+              <md-icon>keyboard_arrow_down</md-icon>
+            </md-button>
+          </md-card-expand-trigger>
+        </md-card-actions>
+
+        <md-card-expand-content>
+          <md-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
+          </md-card-content>
+        </md-card-expand-content>
+      </md-card-expand>
+    </md-card> -->
+
+    <!-- Vaccine Centers -->
+
+     <md-card>
       <md-card-media>
         <img src="@/assets/img/vaccine-center.jpg" alt="People">
       </md-card-media>
@@ -81,27 +115,95 @@
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
 
-      <md-card-expand>
-        <md-card-actions md-alignment="space-between">
-          <div>
-            <!-- <md-button></md-button> -->
-            <!-- <md-button>Action</md-button> -->
-          </div>
-
-          <!-- <md-card-expand-trigger>
-            <md-button class="md-icon-button">
-              <md-icon>keyboard_arrow_down</md-icon>
-            </md-button>
-          </md-card-expand-trigger> -->
-        </md-card-actions>
-
-        <md-card-expand-content>
-          <md-card-content>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-          </md-card-content>
-        </md-card-expand-content>
-      </md-card-expand>
     </md-card>
+
+    <!-- Home Sample Collection -->
+    <md-card>
+      <md-card-media>
+        <img src="@/assets/img/home-sample-collection.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">SAMPLE COLLECTION</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+
+    <!-- MEDICAL ADVICE -->
+    <md-card>
+      <md-card-media>
+        <img src="@/assets/img/contact-doctor.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">MEDICAL ADVICE</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+    <!-- Near By Medical Shops -->
+     <md-card>
+      <md-card-media>
+        <img src="@/assets/img/medicine.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">NEAR BY MEDICAL SHOPS</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+    <!-- Paid Isolation -->
+      <md-card>
+      <md-card-media>
+        <img src="@/assets/img/isolation-center.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">PAID ISOLATION</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+   <!-- GROCERY AT DOORSTEP -->
+     <md-card>
+      <md-card-media>
+        <img src="@/assets/img/CoronaGroceries.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">GROCERY AT DOORSTEP</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+     <!-- NGO HELPLINE -->
+     <md-card>
+      <md-card-media>
+        <img src="@/assets/img/ngo.png" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">NGO'S PROVIDING RELIEF</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+    <!-- Register Yourself -->
+     <md-card>
+      <md-card-media>
+        <img src="@/assets/img/join-us.png" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">REGISTER WITH US</div>
+        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+
+    </md-card>
+
+
   </div>
 
   </div>
@@ -263,7 +365,34 @@ axios.request(options).then(function (response) {
   .md-title{
     text-align: center;
     font-weight: bold;
+    font-size: 20px  !important;
   }
+  .md-theme-default{
+    background: white  !important;
+    color: black  !important;
+    font-weight: bold  !important;
+  }
+  .md-card{
+    margin: 10px 20px 20px 0px;
+    transition: transform .2s; /* Animation */
+  }
+  img{
+    max-height: 150px;
+  }
+
+  .zoom {
+  padding: 50px;
+  background-color: green;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.md-card:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 
 
 </style>
