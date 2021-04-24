@@ -2,9 +2,9 @@
   <div class="wrapper">
     <side-bar>
       <template slot="links">
-        <sidebar-link to="/dashboard" name="WELCOME" icon="ti-user"/>
-        <sidebar-link to="/table-list" name="Ambulance Service " icon="ti-view-list-alt"/>
-        <sidebar-link to="/vaccine-centers" name="VACCINE CENTERS" icon="ti-heart"/>
+          <sidebar-link to="/dashboard" name="WELCOME" icon="ti-user"/>
+          <sidebar-link to="/table-list" name="Ambulance Service " icon="ti-view-list-alt"/>
+          <sidebar-link to="/vaccine-centers" name="VACCINE CENTERS" icon="ti-heart"/>
         <!-- <sidebar-link to="/stats" name="User Profile" icon="ti-user"/> -->
         <!-- <sidebar-link to="/table-list" name="Table List" icon="ti-view-list-alt"/> -->
         <!-- <sidebar-link to="/typography" name="Typography" icon="ti-text"/> -->
@@ -56,6 +56,7 @@ import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "./MobileMenu";
+import { EventBus } from '../../main.js'
 export default {
   components: {
     TopNavbar,
@@ -63,11 +64,17 @@ export default {
     DashboardContent,
     MobileMenu
   },
+  mounted(){
+  
+  },
   methods: {
     toggleSidebar() {
       if (this.$sidebar.showSidebar) {
         this.$sidebar.displaySidebar(false);
       }
+    },
+    selectedTab(){
+      console.log('tab')
     }
   }
 };

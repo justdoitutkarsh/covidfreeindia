@@ -203,21 +203,22 @@
       </md-card-header>
 
     </md-card>
-
-
   </div>
-
+ 
   </div>
+  
 </template>
+
 <script>
 import { StatsCard, ChartCard } from "@/components/index";
 import Chartist from 'chartist';
 import axios from "axios";
-// import { bus } from '../main'
+import { EventBus } from '../main.js'
+
 export default {
   components: {
     StatsCard,
-    ChartCard
+    ChartCard,
   },
   /**
    * Chart data used to render stats, charts. Should be replaced with server data
@@ -340,7 +341,7 @@ export default {
 };
 let vm=this
 axios.request(options).then(function (response) {
-	console.log(response.data);
+	// console.log(response.data);
   vm.covidData=response.data;
   var result=vm.covidData.filter(obj=> obj.sno == "11111");
   // console.log(result)
@@ -353,8 +354,7 @@ axios.request(options).then(function (response) {
   },
   methods: {
     nagivateToPage(path){
-      console.log('click')
-      // bus.$emit('changeIt', 'changed header');
+      sessionStorage.selectedTab = path;
       this.$router.push(path)
     }
   }

@@ -13,6 +13,7 @@
   </component>
 </template>
 <script>
+import { EventBus } from '../../main.js'
 export default {
   name: "sidebar-link",
   inheritAttrs: false,
@@ -39,6 +40,13 @@ export default {
     hideSidebar() {
       if (this.autoClose) {
         this.$sidebar.displaySidebar(false);
+        let path = this.$route.path;
+        path = path.split('');
+        path.shift();
+        path=path.join('')
+        sessionStorage.selectedTab=path;
+        console.log(path)
+        EventBus.$emit('setPathName',path)
       }
     },
     isActive() {

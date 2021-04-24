@@ -26,7 +26,8 @@
                         :key="index"
                         :to="link.path"
                         :name="link.name"
-                        :icon="link.icon">
+                        :icon="link.icon"
+                        >
           </sidebar-link>
         </slot>
       </ul>
