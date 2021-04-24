@@ -51,6 +51,11 @@ const routes = [
         path: "table-list",
         name: "Ambulance Service",
         component: TableList
+      },
+      {
+        path: "vaccine-centers",
+        name: "VACCINE CENTERS",
+        component: TableList
       }
     ]
   },

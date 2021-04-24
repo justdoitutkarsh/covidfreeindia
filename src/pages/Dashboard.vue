@@ -105,7 +105,8 @@
 
     <!-- Vaccine Centers -->
 
-     <md-card>
+     <md-card> 
+      <div v-on:click="nagivateToPage('vaccine-centers')">
       <md-card-media>
         <img src="@/assets/img/vaccine-center.jpg" alt="People">
       </md-card-media>
@@ -114,7 +115,7 @@
         <div class="md-title">VACCINE CENTERS</div>
         <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
-
+       </div>
     </md-card>
 
     <!-- Home Sample Collection -->
@@ -212,6 +213,7 @@
 import { StatsCard, ChartCard } from "@/components/index";
 import Chartist from 'chartist';
 import axios from "axios";
+// import { bus } from '../main'
 export default {
   components: {
     StatsCard,
@@ -348,6 +350,13 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
+  },
+  methods: {
+    nagivateToPage(path){
+      console.log('click')
+      // bus.$emit('changeIt', 'changed header');
+      this.$router.push(path)
+    }
   }
 };
 </script>

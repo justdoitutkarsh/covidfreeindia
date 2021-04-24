@@ -2,8 +2,9 @@
   <div class="wrapper">
     <side-bar>
       <template slot="links">
-        <sidebar-link to="/dashboard" name="WELCOME" icon="ti-world"/>
+        <sidebar-link to="/dashboard" name="WELCOME" icon="ti-user"/>
         <sidebar-link to="/table-list" name="Ambulance Service " icon="ti-view-list-alt"/>
+        <sidebar-link to="/vaccine-centers" name="VACCINE CENTERS" icon="ti-heart"/>
         <!-- <sidebar-link to="/stats" name="User Profile" icon="ti-user"/> -->
         <!-- <sidebar-link to="/table-list" name="Table List" icon="ti-view-list-alt"/> -->
         <!-- <sidebar-link to="/typography" name="Typography" icon="ti-text"/> -->
