@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <!-- <p>Oxygen Suppiler Details</p> -->
       <a class="navbar-brand" href="#">{{routeName}}</a>
-<!-- <button class="navbar-toggler navbar-burger"
+<button class="navbar-toggler navbar-burger"
               type="button"
               @click="toggleSidebar"
               :aria-expanded="$sidebar.showSidebar"
@@ -11,7 +11,7 @@
         <span class="navbar-toggler-bar"></span>
         <span class="navbar-toggler-bar"></span>
         <span class="navbar-toggler-bar"></span>
-      </button> -->
+      </button>
        <!-- <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
