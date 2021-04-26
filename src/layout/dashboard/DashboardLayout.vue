@@ -8,7 +8,7 @@
           <sidebar-link to="/plasma" name="PLASMA DONORS" icon="ti-server"/>
           <!-- <sidebar-link to="/medicalAdvice" name="MEDICAL ADVICE" icon="ti-comments"/> -->
           <sidebar-link to="/medicalshops" name="MEDICINES" icon="ti-support"/>
-          <!-- <sidebar-link to="/paidIsolation" name="PAID ISOLATION" icon="ti-wheelchair"/> -->
+          <sidebar-link to="/ambulanceService" name="AMBULANCE SERVICE" icon="ti-truck"/>
           <!-- <sidebar-link to="/foodFacility" name="FOOD FACILITY" icon="ti-shopping-cart"/> -->
           <!-- <sidebar-link to="/ngo" name="NGO'S PROVIDING RELIEF" icon="ti-info"/> -->
           <sidebar-link to="/register" name="REGISTER WITH US" icon="ti-hand-open"/>

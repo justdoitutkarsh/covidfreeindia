@@ -4399,6 +4399,56 @@ export default {
               "city": "Lucknow"
           },
           ]
+        },
+        {
+          selectedTab:"ambulanceService",
+          title: "Ambulance Service",
+          subTitle: "Contact details for Vaccine Centers in your city",
+          columns: ["Index","Name", "Contact","Area"],
+          data:[
+            {
+              "index": "1",
+              "name": "Lakhan",
+              "contact": "9588160614",
+              "area": "Gomti Nagar, Lucknow",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Elite Ambulance Service",
+              "contact": "7985771108",
+              "area": "Near Medical College",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Zeeshan Ambulance Service",
+              "contact": "8808757626",
+              "area": "-",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Ibrahim",
+              "contact": "7905013524",
+              "area": "-",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Almas Ambulance",
+              "contact": "9650596809",
+              "area": "-",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Kishan Singh Ambulance",
+              "contact": "6386048146",
+              "area": "-",
+              "city": "Lucknow"
+          },
+          ]
         }
       ],
       

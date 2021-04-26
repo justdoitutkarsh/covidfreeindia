@@ -74,8 +74,8 @@ const routes = [
         component: TableList
       },
       {
-        path: "paidIsolation",
-        name: "PAID ISOLATION",
+        path: "ambulanceService",
+        name: "AMBULANCE SERVICE",
         component: TableList
       },
       {

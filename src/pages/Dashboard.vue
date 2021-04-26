@@ -158,18 +158,18 @@
        </div>
     </md-card>
     <!-- Paid Isolation -->
-      <!-- <md-card>
-        <div v-on:click="nagivateToPage('paidIsolation')">
+      <md-card>
+        <div v-on:click="nagivateToPage('ambulanceService')">
       <md-card-media>
-        <img src="@/assets/img/isolation-center.jpg" alt="People">
+        <img src="@/assets/img/AMBULANCE.jpg" alt="People">
       </md-card-media>
 
       <md-card-header>
-        <div class="md-title">PAID ISOLATION</div>
+        <div class="md-title">AMBULANCE SERVICE</div>
        
       </md-card-header>
       </div>
-    </md-card> -->
+    </md-card>
    <!-- FOOD FACILITY -->
      <!-- <md-card>
       <div v-on:click="nagivateToPage('foodFacility')">
