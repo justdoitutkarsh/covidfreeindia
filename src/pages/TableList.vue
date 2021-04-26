@@ -4422,13 +4422,6 @@ export default {
           },
           {
               "index": "1",
-              "name": "Zeeshan Ambulance Service",
-              "contact": "8808757626",
-              "area": "-",
-              "city": "Lucknow"
-          },
-          {
-              "index": "1",
               "name": "Ibrahim",
               "contact": "7905013524",
               "area": "-",

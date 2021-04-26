@@ -13,6 +13,7 @@
           <!-- <sidebar-link to="/ngo" name="NGO'S PROVIDING RELIEF" icon="ti-info"/> -->
           <sidebar-link to="/register" name="REGISTER WITH US" icon="ti-hand-open"/>
         <!-- <sidebar-link to="/stats" name="User Profile" icon="ti-user"/> -->
+        <sidebar-link to="/aboutUs" name="About Us" icon="ti-info"/>
         <!-- <sidebar-link to="/table-list" name="Table List" icon="ti-view-list-alt"/> -->
         <!-- <sidebar-link to="/typography" name="Typography" icon="ti-text"/> -->
         <!-- <sidebar-link to="/icons" name="Icons" icon="ti-pencil-alt2"/> -->

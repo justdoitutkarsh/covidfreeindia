@@ -12,16 +12,20 @@
             <div class="col-6">
               {{member.name}}
               <br>
-              <span :class="getStatusClass(member.status)">
+              <!-- <span :class="getStatusClass(member.status)">
                 <small>{{member.status}}</small>
-              </span>
+              </span> -->
+              <a :href=member.status>
+               Linked <i class="ti-linkedin"></i>
+              </a>
+              
             </div>
 
-            <div class="col-3">
+            <!-- <div class="col-3">
               <p-button type="success" outline icon>
                 <i class="fa fa-envelope"></i>
               </p-button>
-            </div>
+            </div> -->
           </div>
         </li>
       </ul>
@@ -35,20 +39,25 @@ export default {
       title: "Team members",
       members: [
         {
-          image: require("@/assets/img/faces/face-0.jpg"),
-          name: "Dj Khaled",
-          status: "Offline"
+          image: require("@/assets/img/utkarsh-pic.png"),
+          name: "Utkarsh Pandey",
+          status: "//www.linkedin.com/in/utkarsh-pandey-99a365143"
         },
         {
-          image: require("@/assets/img/faces/face-1.jpg"),
-          name: "Creative Tim",
-          status: "Available"
+          image: require("@/assets/img/chauhan.png"),
+          name: "Abhishek Chauhan",
+          status: "//www.linkedin.com/in/abhishek5695/"
         },
-        {
-          image: require("@/assets/img/faces/face-1.jpg"),
-          name: "Flume",
-          status: "Busy"
-        }
+        // {
+        //   image: require("@/assets/img/faces/face-1.jpg"),
+        //   name: "Creative Tim",
+        //   status: "Available"
+        // },
+        // {
+        //   image: require("@/assets/img/faces/face-1.jpg"),
+        //   name: "Flume",
+        //   status: "Busy"
+        // }
       ]
     };
   },
@@ -69,4 +78,7 @@ export default {
 };
 </script>
 <style>
+.row{
+  margin-bottom: 20px;
+}
 </style>

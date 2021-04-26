@@ -11,6 +11,7 @@ import Maps from "@/pages/Maps.vue";
 import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
 import register from "../../src/pages/register.vue"
+import aboutUs from '../pages/aboutUs.vue'
 
 const routes = [
   {
@@ -92,6 +93,11 @@ const routes = [
         path: "register",
         name: "REGISTER WITH US",
         component: register
+      },
+      {
+        path: "aboutUs",
+        name: "ABOUT US",
+        component: aboutUs
       }
     ]
   },
