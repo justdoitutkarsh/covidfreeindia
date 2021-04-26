@@ -59,8 +59,8 @@ const routes = [
         component: TableList
       },
       {
-        path: "sampleCollection",
-        name: "SAMPLE COLLECTION",
+        path: "plasma",
+        name: "PLASMA",
         component: TableList
       },
       {
@@ -70,7 +70,7 @@ const routes = [
       },
       {
         path: "medicalshops",
-        name: "NEAR BY MEDICAL SHOPS",
+        name: "MEDICINES",
         component: TableList
       },
       {

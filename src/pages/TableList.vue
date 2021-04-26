@@ -75,6 +75,9 @@ export default {
       currentTab:'',
       noRecordFound:true,
       showTable:false,
+      addedCities:[
+        "Lucknow"
+      ],
       dataToDisplay:[
         {
           selectedTab:"vaccine-centers",
@@ -4211,11 +4214,194 @@ export default {
             "state": "Meghalaya"
         }
                  ]
+        },
+        {
+          selectedTab:"medicalshops",
+          title: "COVID MEDICINES",
+          subTitle: "Contact details for COVID MEDICINES in your city",
+          columns: ["Index","Medicine","Supplier", "Contact","City"],
+          data: [
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "ALBINO LIFESCIENCES PVT.LTD.",
+              "contact":"8800019190",
+              "city": "Lucknow"
           },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "NAVAL MEDICALS",
+              "contact":"9415953301",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "ARNOVA HEALTHCARE (LKN)",
+              "contact":"9920590070",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "SHREE HARI ENTERPRISES",
+              "contact":"9619514067",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "SHAKUN SALES PVT. LTD.(TRADE)",
+              "contact":"2382494",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "D.N.ASSOCIATES",
+              "contact":"9839063042",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "ALBINO LIFESCIENCES PVT.LTD.",
+              "contact":"8800019190",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Singh Medicals, Aliganj",
+              "contact":"9918633338",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "MSN Group",
+              "contact":"9100591030",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "CLICK Your MED",
+              "contact":"7706904000",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Akshara Medicals",
+              "contact":"7460011077/7460927777",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Apollo Medics",
+              "contact":"8429029847",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "OM Pharma",
+              "contact":"5222239078",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Sachdeva Medical",
+              "contact":"5224024545",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Tanmay Bansal",
+              "contact":"7081777781",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Jeetendra S Pundur",
+              "contact":"8299011730",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Nitin Singh",
+              "contact":"9918633338",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Mridula Shukla",
+              "contact":"8182074529",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "medicine": "Remdesivir",
+              "supplier": "Sakun Medical",
+              "contact":"9335025309",
+              "city": "Lucknow"
+          },
+          
+          ]
+        },
+        {
+          selectedTab:"plasma",
+          title: "Plasma Donors",
+          subTitle: "Contact details for Vaccine Centers in your city",
+          columns: ["Index","Name","Blood Group", "Contact","City"],
+          data:[
+            {
+              "index": "1",
+              "name": "Nayonika Sen Roy",
+              "blood group":"",
+              "contact": "8948949330",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Chirag Mathur",
+              "blood group":"",
+              "contact": "8318308171",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Shikhar Baijal",
+              "blood group":"",
+              "contact": "7652037231",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Tanisha Gupta",
+              "blood group":"",
+              "contact": "7905729636",
+              "city": "Lucknow"
+          },
+          {
+              "index": "1",
+              "name": "Geetika Mudgal",
+              "blood group":"",
+              "contact": "8376088395",
+              "city": "Lucknow"
+          },
+          ]
+        }
       ],
-      addedCities:[
-        "Lucknow","Varanasi"
-      ]
+      
     };
   },
   computed: {
@@ -4246,7 +4432,7 @@ export default {
      cityWiseData[i].index=i+1
    }
    this.table1.data = cityWiseData;
-  // console.log(cityWiseData)
+   console.log(cityWiseData)
   
    //this.table1.data = cityWiseData[0].data;
     }

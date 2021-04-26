@@ -5,12 +5,12 @@
           <sidebar-link to="/dashboard" name="WELCOME" icon="ti-user"/>
           <!-- <sidebar-link to="/table-list" name="Ambulance Service " icon="ti-view-list-alt"/> -->
           <sidebar-link to="/vaccine-centers" name="VACCINE CENTERS" icon="ti-heart"/>
-          <sidebar-link to="/sampleCollection" name="SAMPLE COLLECTION" icon="ti-marker-alt"/>
-          <sidebar-link to="/medicalAdvice" name="MEDICAL ADVICE" icon="ti-comments"/>
-          <sidebar-link to="/medicalshops" name="NEAR BY MEDICAL SHOPS" icon="ti-support"/>
-          <sidebar-link to="/paidIsolation" name="PAID ISOLATION" icon="ti-wheelchair"/>
-          <sidebar-link to="/foodFacility" name="FOOD FACILITY" icon="ti-shopping-cart"/>
-          <sidebar-link to="/ngo" name="NGO'S PROVIDING RELIEF" icon="ti-info"/>
+          <sidebar-link to="/plasma" name="PLASMA DONORS" icon="ti-server"/>
+          <!-- <sidebar-link to="/medicalAdvice" name="MEDICAL ADVICE" icon="ti-comments"/> -->
+          <sidebar-link to="/medicalshops" name="MEDICINES" icon="ti-support"/>
+          <!-- <sidebar-link to="/paidIsolation" name="PAID ISOLATION" icon="ti-wheelchair"/> -->
+          <!-- <sidebar-link to="/foodFacility" name="FOOD FACILITY" icon="ti-shopping-cart"/> -->
+          <!-- <sidebar-link to="/ngo" name="NGO'S PROVIDING RELIEF" icon="ti-info"/> -->
           <sidebar-link to="/register" name="REGISTER WITH US" icon="ti-hand-open"/>
         <!-- <sidebar-link to="/stats" name="User Profile" icon="ti-user"/> -->
         <!-- <sidebar-link to="/table-list" name="Table List" icon="ti-view-list-alt"/> -->
