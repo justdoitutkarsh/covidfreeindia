@@ -15,8 +15,11 @@
               <!-- <span :class="getStatusClass(member.status)">
                 <small>{{member.status}}</small>
               </span> -->
-              <a :href=member.status>
+              <a :href=member.status v-if="member.profile==='linkedin'">
                Linked <i class="ti-linkedin"></i>
+              </a>
+              <a :href=member.status v-if="member.profile==='instagram'">
+               Instagram <i class="ti-instagram"></i>
               </a>
               
             </div>
@@ -41,18 +44,22 @@ export default {
         {
           image: require("@/assets/img/utkarsh-pic.png"),
           name: "Utkarsh Pandey",
-          status: "//www.linkedin.com/in/utkarsh-pandey-99a365143"
+          status: "//www.linkedin.com/in/utkarsh-pandey-99a365143",
+          profile:"linkedin"
         },
         {
           image: require("@/assets/img/chauhan.png"),
           name: "Abhishek Chauhan",
-          status: "//www.linkedin.com/in/abhishek5695/"
+          status: "//www.linkedin.com/in/abhishek5695/",
+          profile:"linkedin"
         },
-        // {
-        //   image: require("@/assets/img/faces/face-1.jpg"),
-        //   name: "Creative Tim",
-        //   status: "Available"
-        // },
+        {
+          image: require("@/assets/img/aditi.jpeg"),
+          name: "Aditi Chaudhary",
+          status: "//www.instagram.com/aditichaudhary._?igshid=w34yvsa1jhdw",
+          profile:"instagram"
+        },
+        
         // {
         //   image: require("@/assets/img/faces/face-1.jpg"),
         //   name: "Flume",
