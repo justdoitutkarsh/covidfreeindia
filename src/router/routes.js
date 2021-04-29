@@ -11,8 +11,9 @@ import Maps from "@/pages/Maps.vue";
 import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
 import register from "../../src/pages/register.vue"
-import aboutUs from '../pages/aboutUs.vue'
-import hosptial from '../pages/hospital.vue'
+import aboutUs from '../pages/aboutUs.vue';
+import hosptial from '../pages/hospital.vue';
+import oxygen from '../pages/oxygen.vue';
 const routes = [
   {
     path: "/",
@@ -103,6 +104,11 @@ const routes = [
         path: "hospital",
         name: "HOSPITAL BEDS",
         component: hosptial
+      },
+      {
+        path: "oxygen",
+        name: "Oxygen",
+        component: oxygen
       }
     ]
   },

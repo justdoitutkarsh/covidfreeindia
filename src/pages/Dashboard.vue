@@ -143,6 +143,19 @@
       </div>
     </md-card>
 
+     <!-- Oxygen AVAILABILITY -->
+    <md-card>
+      <div v-on:click="nagivateToPage('oxygen')">
+      <md-card-media>
+        <img src="@/assets/img/oxygen.png" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">Oxygen</div>
+      </md-card-header>
+      </div>
+    </md-card>
+
     <!-- MEDICAL ADVICE -->
     <!-- <md-card>
       <div v-on:click="nagivateToPage('medicalAdvice')">
