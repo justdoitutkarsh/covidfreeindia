@@ -4,11 +4,12 @@
       <template slot="links">
           <sidebar-link to="/dashboard" name="WELCOME" icon="ti-user"/>
           <!-- <sidebar-link to="/table-list" name="Ambulance Service " icon="ti-view-list-alt"/> -->
-          <sidebar-link to="/vaccine-centers" name="VACCINE CENTERS" icon="ti-heart"/>
-          <sidebar-link to="/plasma" name="PLASMA DONORS" icon="ti-server"/>
+          <!-- <sidebar-link to="/vaccine-centers" name="VACCINE CENTERS" icon="ti-heart"/> -->
+          <!-- <sidebar-link to="/plasma" name="PLASMA DONORS" icon="ti-server"/> -->
+          <sidebar-link to="/hospital" name="HOSPITAL BEDS" icon="ti-support"/>
           <!-- <sidebar-link to="/medicalAdvice" name="MEDICAL ADVICE" icon="ti-comments"/> -->
-          <sidebar-link to="/medicalshops" name="MEDICINES" icon="ti-support"/>
-          <sidebar-link to="/ambulanceService" name="AMBULANCE SERVICE" icon="ti-truck"/>
+          <!-- <sidebar-link to="/medicalshops" name="MEDICINES" icon="ti-support"/> -->
+          <!-- <sidebar-link to="/ambulanceService" name="AMBULANCE SERVICE" icon="ti-truck"/> -->
           <!-- <sidebar-link to="/foodFacility" name="FOOD FACILITY" icon="ti-shopping-cart"/> -->
           <!-- <sidebar-link to="/ngo" name="NGO'S PROVIDING RELIEF" icon="ti-info"/> -->
           <sidebar-link to="/register" name="REGISTER WITH US" icon="ti-hand-open"/>

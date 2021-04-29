@@ -4442,7 +4442,22 @@ export default {
               "city": "Lucknow"
           },
           ]
-        }
+        },
+         {
+          selectedTab:"hospital",
+          title: "Hospital Beds",
+          subTitle: "Contact details for Vaccine Centers in your city",
+          columns: ["Index","Name", "Contact","Area"],
+          data:[
+            {
+              "index": "1",
+              "name": "Lakhan",
+              "contact": "9588160614",
+              "area": "Gomti Nagar, Lucknow",
+              "city": "Lucknow"
+          },
+          ]
+        },
       ],
       
     };

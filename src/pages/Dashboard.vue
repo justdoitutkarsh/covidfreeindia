@@ -105,7 +105,7 @@
 
     <!-- Vaccine Centers -->
 
-     <md-card> 
+     <!-- <md-card> 
       <div v-on:click="nagivateToPage('vaccine-centers')">
       <md-card-media>
         <img src="@/assets/img/vaccine-center.jpg" alt="People">
@@ -113,13 +113,12 @@
 
       <md-card-header>
         <div class="md-title">VACCINE CENTERS</div>
-        <!-- <div class="md-subhead">Subtitle here</div> -->
       </md-card-header>
        </div>
-    </md-card>
+    </md-card> -->
 
-    <!-- Home Sample Collection -->
-    <md-card>
+    <!-- PLASMA -->
+    <!-- <md-card>
       <div v-on:click="nagivateToPage('plasma')">
       <md-card-media>
         <img src="@/assets/img/plasma.jpg" alt="People">
@@ -127,7 +126,19 @@
 
       <md-card-header>
         <div class="md-title">PLASMA DONORS</div>
-        <!-- <div class="md-subhead">Subtitle here</div> -->
+      </md-card-header>
+      </div>
+    </md-card> -->
+
+     <!-- HOSPITAL AVAILABILITY -->
+    <md-card>
+      <div v-on:click="nagivateToPage('hospital')">
+      <md-card-media>
+        <img src="@/assets/img/hosptial.jpg" alt="People">
+      </md-card-media>
+
+      <md-card-header>
+        <div class="md-title">HOSPITAL BEDS</div>
       </md-card-header>
       </div>
     </md-card>
@@ -145,7 +156,7 @@
       </div>
     </md-card> -->
     <!-- Near By Medical Shops -->
-     <md-card>
+     <!-- <md-card>
        <div v-on:click="nagivateToPage('medicalshops')">
       <md-card-media>
         <img src="@/assets/img/medicine.jpg" alt="People">
@@ -153,12 +164,12 @@
 
       <md-card-header>
         <div class="md-title">MEDICINES</div>
-        <!-- <div class="md-subhead">Subtitle here</div> -->
+
       </md-card-header>
        </div>
-    </md-card>
-    <!-- Paid Isolation -->
-      <md-card>
+    </md-card> -->
+    <!-- Ambulance Service -->
+      <!-- <md-card>
         <div v-on:click="nagivateToPage('ambulanceService')">
       <md-card-media>
         <img src="@/assets/img/AMBULANCE.jpg" alt="People">
@@ -169,7 +180,7 @@
        
       </md-card-header>
       </div>
-    </md-card>
+    </md-card> -->
    <!-- FOOD FACILITY -->
      <!-- <md-card>
       <div v-on:click="nagivateToPage('foodFacility')">
@@ -357,6 +368,7 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
+
   },
   methods: {
     nagivateToPage(path){

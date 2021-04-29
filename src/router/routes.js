@@ -12,7 +12,7 @@ import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
 import register from "../../src/pages/register.vue"
 import aboutUs from '../pages/aboutUs.vue'
-
+import hosptial from '../pages/hospital.vue'
 const routes = [
   {
     path: "/",
@@ -98,6 +98,11 @@ const routes = [
         path: "aboutUs",
         name: "ABOUT US",
         component: aboutUs
+      },
+      {
+        path: "hospital",
+        name: "HOSPITAL BEDS",
+        component: hosptial
       }
     ]
   },
