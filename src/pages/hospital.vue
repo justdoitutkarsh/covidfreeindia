@@ -88,7 +88,7 @@
 import { EventBus } from '../main.js'
 import axios from "axios";
 import moment from 'moment'
-import jsonResponse from '../assets/json/static-data.json'
+import jsonResponse from '../assets/json/govtHospitalBedWebsites.json'
 
 export default {
   components: {
