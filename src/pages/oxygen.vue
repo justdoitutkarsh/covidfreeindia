@@ -8,7 +8,7 @@
           <label for="states" style="color: #66615B;">Select Your States</label>
           <md-select v-model="selectedStateName" name="states" id="states">
             <div v-for="states in addedStates" @click="selectedStatesOption()">
-            <md-option value="states">{{states}}</md-option>
+            <md-option :value="states">{{states}}</md-option>
             </div>
           </md-select>
         </md-field>
@@ -18,7 +18,7 @@
           <label for="country" style="color: #66615B;">Select Your City</label>
           <md-select v-model="selectedCityName" name="country" id="country">
             <div v-for="city in addedCities" @click="selectedCityOption()">
-            <md-option value="city">{{city}}</md-option>
+            <md-option :value="city">{{city}}</md-option>
             </div>
           </md-select>
         </md-field>
