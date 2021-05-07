@@ -1,0 +1,81 @@
+{
+    "govtWebsites":[
+        {
+        "state":"Andhra Pradesh",
+        "link":"http://dashboard.covid19.ap.gov.in/ims/hospbed_reports"
+        },
+        {
+        "state":"Delhi (NCT)",
+        "link":"https://coronabeds.jantasamvad.org/"
+        },
+        {
+        "state":"Bihar",
+        "link":"https://covid19.bihar.gov.in/"
+        },
+        {
+        "state":"Chhattisgarh",
+        "link":"https://cg.nic.in/health/covid19/RTPBedAvailable.aspx"
+        },
+        {
+        "state":"Dadra and Nagar Haveli and Daman & Diu (UT)",
+        "link":"https://covidfacility.dddgov.in/"
+        },
+        {
+        "state":"Gujarat",
+        "link":"https://gujcovid19.gujarat.gov.in/"
+        },
+        {
+        "state":"Haryana",
+        "link":"https://coronaharyana.in/"
+        },
+        {
+        "state":"Jharkhand",
+        "link":"https://www.jharkhand.gov.in/Home/Covid19Dashboard"
+        },
+        {
+        "state":"Karnataka",
+        "link":"https://bbmpgov.com/chbms/"
+        },
+        {
+        "state":"Kerala",
+        "link":"https://covid19jagratha.kerala.nic.in/home/addHospitalDashBoard"
+        },
+        {
+        "state":"Madhya Pradesh",
+        "link":"http://sarthak.nhmmp.gov.in/covid/facility-bed-occupancy-dashboard/"
+        },
+        {
+        "state":"Meghalaya",
+        "link":"https://meghealth.in/MeghCare.html"
+        },
+        {
+        "state":"Nagaland",
+        "link":"https://covid19.nagaland.gov.in/"
+        },
+        {
+        "state":"Puducherry (UT)",
+        "link":"https://covid19dashboard.py.gov.in/"
+        },
+        {
+        "state":"Rajasthan",
+        "link":"https://covidinfo.rajasthan.gov.in/COVID19HOSPITALBEDSSTATUSSTATE.aspx"
+        },
+        {
+        "state":"Tamil Nadu",
+        "link":"https://coronabeds.jantasamvad.org/"
+        },
+        {
+        "state":"Uttar Pradesh",
+        "link":"http://dgmhup.gov.in/EN/covid19bedtrack"
+        },
+        {
+        "state":"Uttarakhand",
+        "link":"https://covid19.uk.gov.in/bedssummary.aspx"
+        },
+        {
+        "state":"West Bengal",
+        "link":"https://www.wbhealth.gov.in/"
+        }
+    ]
+}
+

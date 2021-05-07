@@ -44,7 +44,7 @@
     <md-card>
       <md-card-header>
         <md-card-header-text>
-          <div class="md-title">{{hospital.name}}</div>
+          <div class="md-title">{{hospital.title}}</div>
           <div class="md-subhead">{{hospital.availability}}</div>
         </md-card-header-text>
 
@@ -70,8 +70,8 @@
       <md-card-content>
         <span v-if="hospital.typeOfBedAvailable!==null">Available bed type:<br></span>
        <span v-if="hospital.typeOfBedAvailable!==null" v-for="types in hospital.typeOfBedAvailable">{{types}}<br></span>
-        <span>Contact No. : {{hospital.phone1}}</span> <br>
-        <span>Verification Status: {{hospital.verificationStatus}}</span> <br> 
+        <span>Contact No. : {{hospital.phone_1}}</span> <br>
+        <span>Verification Status: {{hospital.verification_status}}</span> <br> 
         <span v-if="hospital.comment!==null">Comments: {{hospital.comment}}</span>
         <br><span>Checked on: {{convertTimeToIST(hospital.lastVerifiedOn)}}</span><br>
       </md-card-content>
@@ -88,6 +88,7 @@
 import { EventBus } from '../main.js'
 import axios from "axios";
 import moment from 'moment'
+import jsonResponse from '../assets/json/static-data.json'
 
 export default {
   components: {
@@ -102,15 +103,10 @@ export default {
     addedCities:[
         "Lucknow"
       ],
-    addedStates:["Uttar Pradesh"],
+    addedStates:[],
     hospitalAvailabilityData:[],
     allHospitalAvailabilityData:[],
-    governemntWebsites:[
-      {
-      state:"Andhra Pradesh",
-      link:"http://dashboard.covid19.ap.gov.in/ims/hospbed_reports"
-      }
-    ],
+    governemntWebsites:jsonResponse.govtWebsites,
      type: ['', 'info', 'success', 'warning', 'danger'],
         notifications: {
           topCenter: false
@@ -133,7 +129,7 @@ export default {
     }
     const options = {
     method: 'GET',
-    url: 'https://life-api.coronasafe.network/data/hospital_clinic_centre.json',
+    url: 'https://life-api.coronasafe.network/data/hospital_v2.json',
     };
     let vm=this
     axios.request(options).then(function (response) {
@@ -147,7 +143,7 @@ export default {
     }).catch(function (error) {
         console.error(error);
     });
-    
+
   },
   methods: {
     selectedCityOption(){
@@ -168,11 +164,12 @@ export default {
     }
     },
     selectedStatesOption(){
-        let citiesWiseData=this.allHospitalAvailabilityData.filter(obj=> obj.state == this.selectedStateName);
-        let cityInState = citiesWiseData.map(cityAvailable => cityAvailable.district);
-        cityInState = [...new Set(cityInState)];
-        cityInState = cityInState.sort();
-        this.addedCities = cityInState;
+      let citiesWiseData=this.allHospitalAvailabilityData.filter(obj=> obj.state == this.selectedStateName);
+      let cityInState = citiesWiseData.map(cityAvailable => cityAvailable.district);
+      cityInState = [...new Set(cityInState)];
+      cityInState = cityInState.sort();
+      this.addedCities = cityInState;
+      this.selectedCityName=null; 
     },
     convertTimeToIST(date){
         var convertedDate = moment.utc(date).local().format('DD-MMM-YYYY h:mm A');
