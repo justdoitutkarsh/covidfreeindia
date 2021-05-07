@@ -48,17 +48,30 @@ export default {
           profile:"linkedin"
         },
         {
-          image: require("@/assets/img/chauhan.png"),
-          name: "Abhishek Chauhan",
-          status: "//www.linkedin.com/in/abhishek5695/",
+          image: require("@/assets/img/hasan.png"),
+          name: "Ijtaba Hasan",
+          status: "//www.linkedin.com/in/ijtaba-hasan-39b9aa15a",
           profile:"linkedin"
         },
         {
-          image: require("@/assets/img/aditi.jpeg"),
-          name: "Aditi Chaudhary",
-          status: "//www.instagram.com/aditichaudhary._?igshid=w34yvsa1jhdw",
-          profile:"instagram"
+          image: require("@/assets/img/shubham.png"),
+          name: "Shubham Harsh",
+          status: "//www.linkedin.com/in/shubham-kumar-harsh-5182449b",
+          profile:"linkedin"
         },
+        // {
+        //   image: require("@/assets/img/chauhan.png"),
+        //   name: "Abhishek Chauhan",
+        //   status: "//www.linkedin.com/in/abhishek5695/",
+        //   profile:"linkedin"
+        // },
+        // {
+        //   image: require("@/assets/img/aditi.jpeg"),
+        //   name: "Aditi Chaudhary",
+        //   status: "//www.instagram.com/aditichaudhary._?igshid=w34yvsa1jhdw",
+        //   profile:"instagram"
+        // },
+        
         
         // {
         //   image: require("@/assets/img/faces/face-1.jpg"),
