@@ -1,7 +1,12 @@
 <template>
   <div class="row">
+  <notifications></notifications>
+  <!-- <div class="row">
+    <div class="col-md-3">
+      <p-button type="default" block @click.native="notifyVue('top', 'center')">Top Center</p-button>
+    </div>
+  </div> -->
        <!-- Dropdown -->
-
       <div class="md-layout md-gutter">
       <div class="md-layout-item">
         <md-field>
@@ -25,6 +30,14 @@
           </md-select>
         </md-field>
       </div>
+    </div>
+
+     <div class="government-hospital-links" v-if="selectedCityName !== null " @click="openGovernmentWebsiteForSelectedState()">
+      <p-button type="success" block>
+        <!-- <marquee direction="right"> -->
+        CLICK HERE FOR HOSPITAL BEDS AVAILABILITY ON GOVERNMENT COVID-19 WEBSITE IN {{stateNameToDisplay}}
+        <!-- </marquee> -->
+        </p-button>
     </div>
     
     <div class="hospital-cards" v-for="hospital in hospitalAvailabilityData" v-if="selectedCityName !== null">
@@ -84,13 +97,24 @@ export default {
     return {
     selectedCityName: null,
     selectedStateName: null,
+    stateNameToDisplay:'',
     currentTab:'',
     addedCities:[
         "Lucknow"
       ],
     addedStates:["Uttar Pradesh"],
     hospitalAvailabilityData:[],
-    allHospitalAvailabilityData:[]
+    allHospitalAvailabilityData:[],
+    governemntWebsites:[
+      {
+      state:"Andhra Pradesh",
+      link:"http://dashboard.covid19.ap.gov.in/ims/hospbed_reports"
+      }
+    ],
+     type: ['', 'info', 'success', 'warning', 'danger'],
+        notifications: {
+          topCenter: false
+        }
     };
   },
   computed: {
@@ -110,7 +134,6 @@ export default {
     const options = {
     method: 'GET',
     url: 'https://life-api.coronasafe.network/data/hospital_clinic_centre.json',
-  
     };
     let vm=this
     axios.request(options).then(function (response) {
@@ -138,6 +161,7 @@ export default {
     // });
     let result=dataToSort.filter(city=> city.district.toLowerCase() == this.selectedCityName.toLowerCase());
     this.hospitalAvailabilityData = result
+    this.stateNameToDisplay = this.selectedStateName;
     }
     else{
      
@@ -153,15 +177,42 @@ export default {
     convertTimeToIST(date){
         var convertedDate = moment.utc(date).local().format('DD-MMM-YYYY h:mm A');
         return convertedDate;
-    }
+    },
+    openGovernmentWebsiteForSelectedState(){
+      let websitelink = this.governemntWebsites.filter(link =>link.state.toLowerCase() === this.stateNameToDisplay.toLowerCase())
+      if(websitelink.length !==0){
+        window.open(websitelink[0].link);    
+      }
+      else{
+        this.notifyVue('top', 'center')
+      }
+      
+    },
+
+      notifyVue (verticalAlign, horizontalAlign) {
+        //const color = Math.floor((Math.random() * 4) + 1)
+        const color = 4
+        this.$notify(
+          {
+            message: 'GOVERNMENT COVID-19 WEBSITE NOT AVAILABLE FOR SELECTED STATE',
+            // icon: 'fa fa-gift',
+            horizontalAlign: horizontalAlign,
+            verticalAlign: verticalAlign,
+            type: this.type[color]
+          })
+      }
     }
 };
 </script>
 
 <style lang="scss" scoped>
+.government-hospital-links{
+  width: 100%;
+  margin: 20px;
+}
 .hospital-cards{
     text-align: center;
-    width: 33%  !important;
+    width: 50%  !important;
 }
 .line{
     border-bottom: 1px solid grey;
@@ -239,4 +290,35 @@ export default {
     font-size: 20px;
     font-weight: bold; 
 }
+
+.vue-notifyjs.notifications{
+  .alert{
+   z-index: 100;
+  }
+  .list-move {
+    transition: transform 0.3s, opacity 0.4s;
+  }
+  .list-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .list-enter-active {
+    transition: transform 0.2s ease-in, opacity 0.4s ease-in;
+  }
+  .list-leave-active {
+    transition: transform 1s ease-out, opacity 0.4s ease-out;
+  }
+
+  .list-enter {
+    opacity: 0;
+    transform: scale(1.1);
+
+  }
+  .list-leave-to {
+    opacity: 0;
+    transform: scale(1.2, 0.7);
+  }
+}
+
+
 </style>
