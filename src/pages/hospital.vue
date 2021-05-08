@@ -218,7 +218,8 @@ export default {
   border-color: #038cfc !important;
 }
 .content-text-align{
-  text-align: left !important
+  text-align: left !important;
+  text-transform: capitalize !important;
 }
 .line{
     border-bottom: 1px solid grey;

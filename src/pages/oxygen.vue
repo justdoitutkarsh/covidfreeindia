@@ -28,9 +28,9 @@
     <div class="hospital-cards" v-for="oxy in oxygenAvailabilityData" v-if="selectedCityName !== null">
     <md-card class="content-text-align">
       <md-card-header class="oxy-card-title">
-        <md-card-header-text>
-          <div class="md-title content-text-align">{{oxy.companyName}}<br>{{oxy.name}}</div>
-          <div class="md-subhead content-text-align">{{oxy.phone1}}</div>
+      <md-card-header-text>
+          <div class="md-title content-text-align">{{oxy.title}}</div>
+          <div class="md-subhead content-text-align">{{oxy.phone_1}}</div>
         </md-card-header-text>
       </md-card-header>
         <div class="line"></div>
@@ -38,9 +38,9 @@
        <!-- <span v-if="hospital.typeOfBedAvailable!==null">Available bed type:<br></span> -->
        <span v-if="oxy.type!==null" v-for="types in oxy.type">{{types}}<br></span>
         <!-- <span>Contact No. : {{hospital.phone1}}</span> <br> -->
-        <span>Verification Status: {{oxy.verificationStatus}}</span> <br> 
-        <span v-if="oxy.comment!==null">Comments: {{oxy.comment}}</span>
-        <br><span>Checked on: {{convertTimeToIST(oxy.lastVerifiedOn)}}</span><br>
+        <span>Verification Status: {{oxy.verification_status}}</span> <br> 
+        <span v-if="oxy.comment!==null">Comments: {{oxy.comment}}</span><br>
+        <span>Verified On: {{convertTimeToIST(oxy.lastVerifiedOn)}}</span><br>
       </md-card-content>
     </md-card>
   </div>
@@ -65,7 +65,7 @@ export default {
       ],
     addedStates:["Uttar Pradesh"],
     oxygenAvailabilityData:[],
-    allOxygenAvailabilityData:[]
+    allOxygenAvailabilityData:[],
     };
   },
   computed: {
@@ -84,7 +84,7 @@ export default {
     }
     const options = {
     method: 'GET',
-    url: 'https://life-api.coronasafe.network/data/oxygen.json',
+    url: 'https://life-api.coronasafe.network/data/oxygen_v2.json',
   
     };
     let vm=this
@@ -132,7 +132,23 @@ export default {
   background-color: #038cfc !important;
 }
 .content-text-align{
-  text-align: left !important
+  text-align: left !important;
+  text-transform: capitalize !important;
+}
+.search-type-container{
+
+}
+.img-container{
+  width: 2em;
+  height: 2em;
+  border-radius: 50% !important;
+  position: relative;
+  overflow: hidden;
+
+  img{
+    display: inline;
+    margin: 0 auto;
+  }
 }
 .line{
     border-bottom: 1px solid grey;
