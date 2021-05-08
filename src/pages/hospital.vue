@@ -44,6 +44,15 @@
     <md-card class="content-text-align">
       <md-card-header class="hosp-card-title">
         <md-card-header-text>
+          <div class="search-type-container">
+            <div class="img-container">
+              <img src="../assets/img/hospital-bed.png" alt="People">
+            </div>
+            Oxygen
+            <div class="img-container" v-if="hospital.verification_status == 'verified'">
+              <img src="../assets/img/check.png" alt="People">
+            </div>
+          </div>
           <div class="md-title content-text-align">{{hospital.title}}</div>
           <div class="md-subhead content-text-align">{{hospital.availability}}</div>
         </md-card-header-text>
@@ -220,6 +229,25 @@ export default {
 .content-text-align{
   text-align: left !important;
   text-transform: capitalize !important;
+}
+.search-type-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #ffffff;
+}
+.img-container{
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50% !important;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0.5em;
+
+  img{
+    display: inline;
+    margin: 0 auto;
+  }
 }
 .line{
     border-bottom: 1px solid grey;

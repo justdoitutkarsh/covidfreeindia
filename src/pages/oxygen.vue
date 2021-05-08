@@ -28,7 +28,16 @@
     <div class="hospital-cards" v-for="oxy in oxygenAvailabilityData" v-if="selectedCityName !== null">
     <md-card class="content-text-align">
       <md-card-header class="oxy-card-title">
-      <md-card-header-text>
+        <md-card-header-text>
+          <div class="search-type-container">
+            <div class="img-container">
+              <img src="../assets/img/lack-of-air.png" alt="People">
+            </div>
+            Oxygen
+            <div class="img-container" v-if="oxy.verification_status == 'verified'">
+              <img src="../assets/img/check.png" alt="People">
+            </div>
+          </div>
           <div class="md-title content-text-align">{{oxy.title}}</div>
           <div class="md-subhead content-text-align">{{oxy.phone_1}}</div>
         </md-card-header-text>
@@ -136,14 +145,18 @@ export default {
   text-transform: capitalize !important;
 }
 .search-type-container{
-
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #ffffff;
 }
 .img-container{
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   border-radius: 50% !important;
   position: relative;
   overflow: hidden;
+  margin: 0 0.5em;
 
   img{
     display: inline;
