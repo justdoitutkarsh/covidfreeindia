@@ -26,11 +26,11 @@
     </div>
     
     <div class="hospital-cards" v-for="oxy in oxygenAvailabilityData" v-if="selectedCityName !== null">
-    <md-card>
+    <md-card class="content-text-align">
       <md-card-header class="oxy-card-title">
         <md-card-header-text>
-          <div class="md-title">{{oxy.companyName}}<br>{{oxy.name}}</div>
-          <div class="md-subhead">{{oxy.phone1}}</div>
+          <div class="md-title content-text-align">{{oxy.companyName}}<br>{{oxy.name}}</div>
+          <div class="md-subhead content-text-align">{{oxy.phone1}}</div>
         </md-card-header-text>
       </md-card-header>
         <div class="line"></div>
@@ -130,6 +130,9 @@ export default {
 }
 .oxy-card-title{
   background-color: #038cfc !important;
+}
+.content-text-align{
+  text-align: left !important
 }
 .line{
     border-bottom: 1px solid grey;
