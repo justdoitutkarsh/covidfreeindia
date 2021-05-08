@@ -27,7 +27,7 @@
     
     <div class="hospital-cards" v-for="oxy in oxygenAvailabilityData" v-if="selectedCityName !== null">
     <md-card>
-      <md-card-header>
+      <md-card-header class="oxy-card-title">
         <md-card-header-text>
           <div class="md-title">{{oxy.companyName}}<br>{{oxy.name}}</div>
           <div class="md-subhead">{{oxy.phone1}}</div>
@@ -127,6 +127,9 @@ export default {
 .hospital-cards{
     text-align: center;
     width: 50%  !important;
+}
+.oxy-card-title{
+  background-color: #038cfc !important;
 }
 .line{
     border-bottom: 1px solid grey;

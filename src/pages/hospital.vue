@@ -41,11 +41,11 @@
     </div>
     
     <div class="hospital-cards" v-for="hospital in hospitalAvailabilityData" v-if="selectedCityName !== null">
-    <md-card>
+    <md-card class="content-text-align">
       <md-card-header class="hosp-card-title">
         <md-card-header-text>
-          <div class="md-title">{{hospital.title}}</div>
-          <div class="md-subhead">{{hospital.availability}}</div>
+          <div class="md-title content-text-align">{{hospital.title}}</div>
+          <div class="md-subhead content-text-align">{{hospital.availability}}</div>
         </md-card-header-text>
 
         <!-- <md-menu md-size="big" md-direction="bottom-end">
@@ -69,11 +69,11 @@
         <div class="line"></div>
       <md-card-content>
         <span v-if="hospital.typeOfBedAvailable!==null">Available bed type:<br></span>
-       <span v-if="hospital.typeOfBedAvailable!==null" v-for="types in hospital.typeOfBedAvailable">{{types}}<br></span>
+        <span v-if="hospital.typeOfBedAvailable!==null" v-for="types in hospital.typeOfBedAvailable">{{types}}<br></span>
         <span>Contact No. : {{hospital.phone_1}}</span> <br>
         <span>Verification Status: {{hospital.verification_status}}</span> <br> 
         <span v-if="hospital.comment!==null">Comments: {{hospital.comment}}</span>
-        <br><span>Checked on: {{convertTimeToIST(hospital.lastVerifiedOn)}}</span><br>
+        <br><span>Last Verified: {{convertTimeToIST(hospital.lastVerifiedOn)}}</span><br>
       </md-card-content>
 
       <!-- <md-card-actions md-alignment="left">
@@ -216,6 +216,9 @@ export default {
 .url-btn{
   background-color: #038cfc !important;
   border-color: #038cfc !important;
+}
+.content-text-align{
+  text-align: left !important
 }
 .line{
     border-bottom: 1px solid grey;
