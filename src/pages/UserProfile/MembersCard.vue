@@ -59,6 +59,12 @@ export default {
           status: "//www.linkedin.com/in/shubham-kumar-harsh-5182449b",
           profile:"linkedin"
         },
+        {
+          image: require("@/assets/img/saurav-pic.png"),
+          name: "Saurav Kumar",
+          status: "//www.linkedin.com/in/saurav-kumar-a3ab96172",
+          profile:"linkedin"
+        },
         // {
         //   image: require("@/assets/img/chauhan.png"),
         //   name: "Abhishek Chauhan",

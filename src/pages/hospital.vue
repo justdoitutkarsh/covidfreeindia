@@ -33,7 +33,7 @@
     </div>
 
      <div class="government-hospital-links" v-if="selectedCityName !== null " @click="openGovernmentWebsiteForSelectedState()">
-      <p-button type="success" block>
+      <p-button type="success" block class="url-btn">
         <!-- <marquee direction="right"> -->
         CLICK HERE FOR HOSPITAL BEDS AVAILABILITY ON GOVERNMENT COVID-19 WEBSITE IN {{stateNameToDisplay}}
         <!-- </marquee> -->
@@ -42,7 +42,7 @@
     
     <div class="hospital-cards" v-for="hospital in hospitalAvailabilityData" v-if="selectedCityName !== null">
     <md-card>
-      <md-card-header>
+      <md-card-header class="hosp-card-title">
         <md-card-header-text>
           <div class="md-title">{{hospital.title}}</div>
           <div class="md-subhead">{{hospital.availability}}</div>
@@ -206,8 +206,16 @@ export default {
   margin: 20px;
 }
 .hospital-cards{
-    text-align: center;
-    width: 50%  !important;
+  text-align: center;
+  width: 50%  !important;
+  
+}
+.hosp-card-title{
+  background-color: #038cfc !important;
+}
+.url-btn{
+  background-color: #038cfc !important;
+  border-color: #038cfc !important;
 }
 .line{
     border-bottom: 1px solid grey;
