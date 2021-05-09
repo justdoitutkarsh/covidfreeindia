@@ -60,17 +60,23 @@ export default {
           profile:"linkedin"
         },
         {
+          image: require("@/assets/img/rahul.jpeg"),
+          name: "Rahul Raj Sharma",
+          status: "//www.linkedin.com/in/rahul-raj-sharma-378382134",
+          profile:"linkedin"
+        },
+        {
           image: require("@/assets/img/saurav.png"),
           name: "Saurav Kumar",
           status: "//www.linkedin.com/in/saurav-kumar-a3ab96172",
           profile:"linkedin"
         },
-        {
-          image: require("@/assets/img/shubham.png"),
-          name: "Shubham Harsh",
-          status: "//www.linkedin.com/in/shubham-kumar-harsh-5182449b",
-          profile:"linkedin"
-        },
+        // {
+        //   image: require("@/assets/img/shubham.png"),
+        //   name: "Shubham Harsh",
+        //   status: "//www.linkedin.com/in/shubham-kumar-harsh-5182449b",
+        //   profile:"linkedin"
+        // },
         
         // {
         //   image: require("@/assets/img/chauhan.png"),
