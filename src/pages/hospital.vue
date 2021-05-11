@@ -48,7 +48,7 @@
             <div class="img-container">
               <img src="../assets/img/hospital-bed.png" alt="People">
             </div>
-            Oxygen
+            Hospital Bed
             <div class="img-container" v-if="hospital.verification_status == 'verified'">
               <img src="../assets/img/check.png" alt="People">
             </div>
