@@ -71,6 +71,12 @@ export default {
           status: "//www.linkedin.com/in/saurav-kumar-a3ab96172",
           profile:"linkedin"
         },
+        {
+          image: require("@/assets/img/venky.jpeg"),
+          name: "Venkatesh Pillay",
+          status: "//www.instagram.com/majestic_venky",
+          profile:"instagram"
+        }
         // {
         //   image: require("@/assets/img/shubham.png"),
         //   name: "Shubham Harsh",
